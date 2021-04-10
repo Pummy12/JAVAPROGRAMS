@@ -1,0 +1,240 @@
+Q0.import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Start
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        String a=sc.nextLine();
+        sc.close();
+        System.out.println("Hello, World.");
+        System.out.println(a);
+    }
+}
+
+Q1)import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+	
+    public static void main(String[] args) {
+        int i = 4;
+        double d = 4.0;
+        String s = "HackerRank ";
+		
+        Scanner scan = new Scanner(System.in);
+        int a=scan.nextInt();
+        double b=scan.nextDouble();
+        scan.nextLine();
+        String sc=scan.nextLine();
+        System.out.println(i+a);
+        System.out.println(d+b);
+        String x=s.concat(sc);
+        System.out.println(x);
+        /* Declare second integer, double, and String variables. */
+
+        /* Read and save an integer, double, and String to your variables.*/
+        // Note: If you have trouble reading the entire String, please go back and review the Tutorial closely.
+        
+        /* Print the sum of both integer variables on a new line. */
+
+        /* Print the sum of the double variables on a new line. */
+		
+        /* Concatenate and print the String variables on a new line; 
+        	the 's' variable above should be printed first. */
+
+        scan.close();
+    }
+}
+
+
+Q2)import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    // Complete the solve function below.
+    static void solve(double meal_cost, int tip_percent, int tax_percent) {
+long result=0;
+    double tip,tax;
+    tip=(meal_cost) * tip_percent / 100;
+    tax=(meal_cost) * tax_percent / 100;
+     result=Math.round(meal_cost + tip + tax);
+     System.out.println(+result);
+
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        double meal_cost = scanner.nextDouble();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        int tip_percent = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        int tax_percent = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        solve(meal_cost, tip_percent, tax_percent);
+
+        scanner.close();
+    }
+}
+
+Q3)import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int N = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+if(N%2==0 && N>=2 && N<=5)
+System.out.println("Not Weird");
+else if(N%2==0 && N>=6 && N<=20)
+System.out.println("Weird");
+else if(N%2==0 && N>20)
+System.out.println("Not Weird");
+else
+System.out.println("Weird");
+        scanner.close();
+    }
+}
+
+Q5)import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int results=0;
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+for(int i=1;i<=10;i++)
+{
+    results=n*i;
+
+System.out.println(n+" x "+ i+ " = " +results);
+
+}
+        scanner.close();
+    }
+}
+
+Q7)import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        int[] arr = new int[n];
+
+        String[] arrItems = scanner.nextLine().split(" ");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int i = 0; i < n; i++) {
+            int arrItem = Integer.parseInt(arrItems[i]);
+            arr[i] = arrItem;
+        }
+        
+        for (int i=n-1 ; i>=0 ; i--)
+        {
+          System.out.print(arr[i]+"\t");  
+        }
+        scanner.close();
+    }
+}
+
+
+Q4)import java.io.*;
+import java.util.*;
+
+public class Person {
+    private int age;	
+  
+	public Person(int initialAge) {
+  		if(0<=initialAge){
+          age=initialAge;
+          }
+          else{ 
+          age=0;
+          System.out.println("Age is not valid, setting age to 0.");
+          }
+          // Add some more code to run some checks on initialAge
+	}
+
+	public void amIOld() {
+  		if(age<13){
+          System.out.println("You are young.");
+          }
+          else if(age<18){
+          System.out.println("You are a teenager.");
+          }
+          else{
+          System.out.println("You are old.");
+          }
+          // Write code determining if this person's age is old and print the correct statement:
+    }
+
+	public void yearPasses() {
+  		age++;// Increment this person's age.
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		for (int i = 0; i < T; i++) {
+			int age = sc.nextInt();
+			Person p = new Person(age);
+			p.amIOld();
+			for (int j = 0; j < 3; j++) {
+				p.yearPasses();
+			}
+			p.amIOld();
+			System.out.println();
+        }
+		sc.close();
+    }
+}
