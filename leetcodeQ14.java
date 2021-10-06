@@ -1,5 +1,6 @@
 
 /*The length variable is applicable to an array but not for string objects whereas the length() method is applicable for string objects but not for arrays.*/
+
 class Solution {
     public String longestCommonPrefix(String[] strs) {
         if(strs.length == 0)
