@@ -1,3 +1,4 @@
+//Wap to find whether a number is prime or not
 import java.util.*;
 class Prime {
 public static void main(String args[])
